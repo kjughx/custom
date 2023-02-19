@@ -25,10 +25,6 @@ local plugins = {
 		override_options = overrides.treesitter,
 	},
 
-	["williamboman/mason.nvim"] = {
-		override_options = overrides.mason,
-	},
-
 	["nvim-tree/nvim-tree.lua"] = {
 		override_options = overrides.nvimtree,
 	},
@@ -43,6 +39,10 @@ local plugins = {
 
 	-- remove plugin
 	["goolord/alpha-nvim"] = false,
+
+  ["folke/which-key.nvim"] = {
+    enabled = true,
+  }
 }
 
 return plugins

@@ -1,27 +1,32 @@
 local M = {}
-local unmap = function()end
+local unmap = function() end
 
 M.general = {
   n = {
-    ["<ESC>"] = {unmap},
+    ["<ESC>"] = { unmap },
     ["<leader>h"] = { "<cmd> noh <CR>", "no highlight" },
 
     ["<leader>w"] = { ":w <CR>", "save file" },
     ["<leader>q"] = { ":q <CR>", "quit file" },
-    ["<C-c>"] = {unmap},
+    ["<C-c>"] = { unmap },
 
-    ["<leader>wa"] = {unmap},
-    ["<leader>wl"] = {unmap},
-    ["<leader>wr"] = {unmap},
+    ["<leader>wa"] = { unmap },
+    ["<leader>wl"] = { unmap },
+    ["<leader>wr"] = { unmap },
+  },
+
+  v = {
+    ["<"] = { "<gv" },
+    [">"] = { ">gv" },
   },
 }
 
 M.tabufline = {
   n = {
-    ["<TAB>"] = {unmap},
-    ["<S-Tab>"] = {unmap},
-    ["<Bslash>"] = {unmap},
-    ["<leader>x"] = {unmap},
+    ["<TAB>"] = { unmap },
+    ["<S-Tab>"] = { unmap },
+    ["<Bslash>"] = { unmap },
+    ["<leader>x"] = { unmap },
     ["<leader>c"] = {
       function()
         require("nvchad_ui.tabufline").close_buffer()
@@ -44,20 +49,48 @@ M.tabufline = {
       end,
       "goto previous buffer",
     },
-  }
+  },
 }
 
 M.nvimtree = {
   n = {
-    ["<C-n>"] = {unmap},
+    ["<C-n>"] = { unmap },
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
-  }
+  },
 }
 
 M.whichkey = {
   n = {
-    ["<leader>wK"] = {unmap},
-    ["<leader>wk"] = {unmap}
+    ["<leader>wK"] = { unmap },
+    ["<leader>wk"] = { unmap },
+  },
+}
+
+M.gitsigns = {
+  -- Actions
+  n = {
+    ["<leader>rh"] = { unmap },
+    ["<leader>gr"] = {
+      function()
+        require("gitsigns").reset_hunk()
+      end,
+      "Reset hunk",
+    },
+
+    ["<leader>gs"] = {
+      function()
+        require("gitsigns").stage_hunk()
+      end,
+      "Stage hunk",
+    },
+
+    ["<leader>ph"] = { unmap },
+    ["<leader>gp"] = {
+      function()
+        require("gitsigns").preview_hunk()
+      end,
+      "Preview hunk",
+    },
   },
 }
 

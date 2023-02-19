@@ -12,7 +12,8 @@ M.treesitter = {
 -- git support in nvimtree
 M.nvimtree = {
   git = {
-    enable = false,
+    ignore = false,
+    enable = true,
   },
 
   renderer = {
@@ -26,6 +27,14 @@ M.nvimtree = {
 
   view = {
     hide_root_folder = false,
+    mappings = {
+      list = {
+        { key = { "l", "<CR>", "o" }, action = "edit", mode = "n" },
+        { key = "h", action = "close_node" },
+        { key = "v", action = "vsplit" },
+        { key = "C", action = "cd" },
+      },
+    },
   },
 }
 
