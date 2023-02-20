@@ -12,7 +12,7 @@ M.treesitter = {
 -- git support in nvimtree
 M.nvimtree = {
   git = {
-    ignore = false,
+    ignore = true,
     enable = true,
   },
 
@@ -33,6 +33,7 @@ M.nvimtree = {
         { key = "h", action = "close_node" },
         { key = "v", action = "vsplit" },
         { key = "C", action = "cd" },
+        { key = "I", action = "toggle_git_ignored" },
       },
     },
   },

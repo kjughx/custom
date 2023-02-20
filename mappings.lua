@@ -2,9 +2,15 @@ local M = {}
 local unmap = function() end
 
 M.general = {
+  i = {
+    -- go to  beginning and end
+    ["<C-b>"] = { unmap },
+    ["<C-e>"] = { unmap },
+  },
   n = {
     ["<ESC>"] = { unmap },
     ["<leader>h"] = { "<cmd> noh <CR>", "no highlight" },
+    ["<leader>v"] = { unmap },
 
     ["<leader>w"] = { ":w <CR>", "save file" },
     ["<leader>q"] = { ":q <CR>", "quit file" },
@@ -91,6 +97,24 @@ M.gitsigns = {
       end,
       "Preview hunk",
     },
+  },
+}
+
+M.lspconfig = {
+  n = {
+    ["<leader>fm"] = { unmap },
+    ["<leader>lf"] = {
+      function()
+        vim.lsp.buf.format { async = true }
+      end,
+      "lsp formatting",
+    },
+  },
+}
+
+M.telescope = {
+  n = {
+    ["<leader>tk"] = { unmap },
   },
 }
 

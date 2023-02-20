@@ -1,7 +1,7 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require("lspconfig")
+local lspconfig = require "lspconfig"
 local servers = { "rust_analyzer", "clangd" }
 
 for _, lsp in ipairs(servers) do
@@ -9,7 +9,7 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach,
     capabilities = capabilities,
     settings = {
-            restartAfterCrash = false,
-        },
-    }
+      restartAfterCrash = false,
+    },
+  }
 end

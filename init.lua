@@ -9,6 +9,7 @@ opt.softtabstop = 4
 
 opt.list = true
 opt.listchars = {
-  tab = '▸·',
-  trail = '·'
+    space = '·',
+    tab = '>>',
+    trail = '·'
 }
