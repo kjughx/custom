@@ -3,8 +3,6 @@ local overrides = require "custom.plugins.overrides"
 ---@type NvPluginsTable
 local plugins = {
 
-  -- Override plugin definition options
-
   ["neovim/nvim-lspconfig"] = {
     dependencies = {
       -- format & linting
@@ -20,7 +18,6 @@ local plugins = {
     end,
   },
 
-  -- overrde plugin configs
   ["nvim-treesitter/nvim-treesitter"] = {
     override_options = overrides.treesitter,
   },
@@ -29,7 +26,6 @@ local plugins = {
     override_options = overrides.nvimtree,
   },
 
-  -- Install a plugin
   ["max397574/better-escape.nvim"] = {
     event = "InsertEnter",
     config = function()
@@ -37,11 +33,14 @@ local plugins = {
     end,
   },
 
-  -- remove plugin
   ["goolord/alpha-nvim"] = false,
 
   ["folke/which-key.nvim"] = {
     enabled = true,
+  },
+
+  ["lukas-reineke/indent-blankline.nvim"] = {
+    override_options = overrides.blankline,
   },
 }
 

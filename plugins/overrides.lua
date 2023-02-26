@@ -39,4 +39,8 @@ M.nvimtree = {
   },
 }
 
+M.blankline = {
+    show_current_context_start = false,
+}
+
 return M

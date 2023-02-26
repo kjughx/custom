@@ -6,7 +6,10 @@ M.general = {
     -- go to  beginning and end
     ["<C-b>"] = { unmap },
     ["<C-e>"] = { unmap },
+    ["<C-j>"] = { "<ESC> :m +1<CR>==gi" },
+    ["<C-k>"] = { "<ESC> :m -2<CR>==gi" },
   },
+
   n = {
     ["<ESC>"] = { unmap },
     ["<leader>h"] = { "<cmd> noh <CR>", "no highlight" },
@@ -19,11 +22,16 @@ M.general = {
     ["<leader>wa"] = { unmap },
     ["<leader>wl"] = { unmap },
     ["<leader>wr"] = { unmap },
+
+    ["<C-j>"] = { ":m +1<CR>==" },
+    ["<C-k>"] = { ":m -2<CR>==" },
   },
 
   v = {
     ["<"] = { "<gv" },
     [">"] = { ">gv" },
+    ["<C-j>"] = { ":m '>+1<CR>gv=gv" },
+    ["<C-k>"] = { ":m '<-2<CR>gv=gv" },
   },
 }
 

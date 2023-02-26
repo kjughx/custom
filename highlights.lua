@@ -4,4 +4,14 @@
 
 local M = {}
 
+---@type HLTable
+M.override = {
+  IndentBlanklineContextStart = {
+    bg = "#282A36",
+  },
+  Comment = {
+    italic = true,
+  },
+}
+
 return M
