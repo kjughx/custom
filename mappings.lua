@@ -53,6 +53,9 @@ M.general = {
 
     ["<C-j>"] = { ":m +1<CR>==" },
     ["<C-k>"] = { ":m -2<CR>==" },
+    ["<C-Up>"] = {":vertical resize +5 <cr>"},
+    ["<C-Dn>"] = {":vertical resize -5 <cr>"},
+
   },
 
   v = {
@@ -67,7 +70,7 @@ M.tabufline = {
   n = {
     ["<leader>c"] = {
       function()
-        require("nvchad_ui.tabufline").close_buffer()
+        require("nvchad.tabufline").close_buffer()
       end,
       "goto next buffer",
     },
@@ -75,7 +78,7 @@ M.tabufline = {
     -- cycle through buffers
     ["<S-l>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflineNext()
+        require("nvchad.tabufline").tabuflineNext()
       end,
       "goto next buffer",
     },
@@ -83,7 +86,7 @@ M.tabufline = {
     -- cycle through buffers
     ["<S-h>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
+        require("nvchad.tabufline").tabuflinePrev()
       end,
       "goto previous buffer",
     },
@@ -124,11 +127,30 @@ M.lspconfig = {
       end,
       "lsp formatting",
     },
+    ["<leader>la"] = {
+      function()
+        vim.lsp.buf.code_action()
+      end,
+      "LSP code action",
+    },
+    ["<leader>lr"] = {
+      function()
+        require("nvchad.renamer").open()
+      end,
+      "LSP rename",
+    },
+    ["<leader>ld"] = {
+      function()
+        vim.diagnostic.open_float { border = "rounded" }
+      end,
+      "Floating diagnostic",
+    }
   },
 }
 
 M.telescope = {
   n = {
+    ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
   },
 }
 
