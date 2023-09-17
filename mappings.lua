@@ -1,23 +1,53 @@
 local M = {}
-local unmap = function() end
+local null = ""
 
-M.general = {
-  i = {
-    -- go to  beginning and end
-    ["<C-b>"] = { unmap },
-    ["<C-e>"] = { unmap },
-    ["<C-j>"] = { "<ESC> :m +1<CR>==gi" },
-    ["<C-k>"] = { "<ESC> :m -2<CR>==gi" },
+M.disabled = {
+  n = {
+    ["<leader>rh"] = null,
+    ["<leader>ph"] = null,
+    ["<leader>fm"] = null,
+
+    ["<leader>tk"] = null,
+    ["<leader>cm"] = null,
+    ["<C-n>"] = null,
+    ["<C-c>"] = null,
+
+    ["<leader>wa"] = null,
+    ["<leader>wl"] = null,
+    ["<leader>wr"] = null,
+    ["<leader>wk"] = null,
+    ["<leader>wK"] = null,
+
+    ["<Esc>"] = null,
+    ["<TAB>"] = null,
+
+    ["<S-Tab>"] = null,
+    ["<Bslash>"] = null,
+
+    ["<leader>x"] = null,
+    ["<leader>v"] = null,
+    ["<leader>ch"] = null,
+    ["<leader>cc"] = null,
+    ["<leader>ca"] = null,
+    ["<leader>rn"] = null,
+    ["<leader>rN"] = null,
+
+    ["<leader>f"] = null,
   },
 
+  i = {
+    -- go to  beginning and end
+    ["<C-b>"] = null,
+    ["<C-e>"] = null,
+  },
+}
+
+M.general = {
   n = {
-    ["<ESC>"] = { unmap },
     ["<leader>h"] = { "<cmd> noh <CR>", "no highlight" },
-    ["<leader>v"] = { unmap },
 
     ["<leader>w"] = { ":w <CR>", "save file" },
     ["<leader>q"] = { ":q <CR>", "quit file" },
-    ["<C-c>"] = { unmap },
 
     ["<leader>e"] = { ":Lexplore<cr>", "toggle netrw" },
 
@@ -35,10 +65,6 @@ M.general = {
 
 M.tabufline = {
   n = {
-    ["<TAB>"] = { unmap },
-    ["<S-Tab>"] = { unmap },
-    ["<Bslash>"] = { unmap },
-    ["<leader>x"] = { unmap },
     ["<leader>c"] = {
       function()
         require("nvchad_ui.tabufline").close_buffer()
@@ -64,23 +90,9 @@ M.tabufline = {
   },
 }
 
-M.nvimtree = {
-  n = {
-    ["<C-n>"] = { unmap },
-  },
-}
-
-M.whichkey = {
-  n = {
-    ["<leader>wK"] = { unmap },
-    ["<leader>wk"] = { unmap },
-  },
-}
-
 M.gitsigns = {
   -- Actions
   n = {
-    ["<leader>rh"] = { unmap },
     ["<leader>gr"] = {
       function()
         require("gitsigns").reset_hunk()
@@ -95,7 +107,6 @@ M.gitsigns = {
       "Stage hunk",
     },
 
-    ["<leader>ph"] = { unmap },
     ["<leader>gp"] = {
       function()
         require("gitsigns").preview_hunk()
@@ -107,7 +118,6 @@ M.gitsigns = {
 
 M.lspconfig = {
   n = {
-    ["<leader>fm"] = { unmap },
     ["<leader>lf"] = {
       function()
         vim.lsp.buf.format { async = true }
@@ -119,7 +129,6 @@ M.lspconfig = {
 
 M.telescope = {
   n = {
-    ["<leader>tk"] = { unmap },
   },
 }
 
