@@ -19,9 +19,7 @@ M.general = {
     ["<leader>q"] = { ":q <CR>", "quit file" },
     ["<C-c>"] = { unmap },
 
-    ["<leader>wa"] = { unmap },
-    ["<leader>wl"] = { unmap },
-    ["<leader>wr"] = { unmap },
+    ["<leader>e"] = { ":Lexplore<cr>", "toggle netrw" },
 
     ["<C-j>"] = { ":m +1<CR>==" },
     ["<C-k>"] = { ":m -2<CR>==" },
@@ -69,7 +67,6 @@ M.tabufline = {
 M.nvimtree = {
   n = {
     ["<C-n>"] = { unmap },
-    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
   },
 }
 

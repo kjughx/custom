@@ -45,6 +45,7 @@ local plugins = {
 
   { "lukas-reineke/indent-blankline.nvim", override_options = overrides.blankline },
 
+  { "nvim-tree/nvim-tree.lua", enabled = false },
 }
 
 return plugins

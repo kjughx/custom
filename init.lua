@@ -1,4 +1,5 @@
 local opt = vim.opt
+local g = vim.g
 
 -- Indenting
 opt.expandtab = true
@@ -13,6 +14,11 @@ opt.listchars = {
   tab = "»·",
   trail = "·",
 }
+
+g.netrw_keppdir = 0
+g.netrw_winsize = 30
+g.netrw_banner = 0
+g.netrw_localcopydircmd = 'cp -r'
 
 local notify = vim.notify
 vim.notify = function(msg, ...)
