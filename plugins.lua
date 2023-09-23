@@ -43,9 +43,11 @@ local plugins = {
 
   { "folke/which-key.nvim", enabled = true },
 
-  { "lukas-reineke/indent-blankline.nvim", override_options = overrides.blankline },
+  { "lukas-reineke/indent-blankline.nvim", opts = overrides.blankline },
 
   { "nvim-tree/nvim-tree.lua", enabled = false },
+
+  { "hrsh7th/nvim-cmp", opts = overrides.cmp },
 }
 
 return plugins

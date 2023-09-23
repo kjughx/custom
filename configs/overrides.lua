@@ -40,7 +40,18 @@ M.nvimtree = {
 }
 
 M.blankline = {
-    show_current_context_start = false,
+  show_current_context_start = false,
+}
+
+local cmp = require "cmp"
+M.cmp = {
+  completion = {
+    completeopt = "menu,menuone,noselect,noinsert",
+  },
+
+  mapping = {
+    ["<CR>"] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Insert, select = false },
+  },
 }
 
 return M

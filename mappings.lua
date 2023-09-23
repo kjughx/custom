@@ -53,8 +53,10 @@ M.general = {
 
     ["<C-j>"] = { ":m +1<CR>==" },
     ["<C-k>"] = { ":m -2<CR>==" },
-    ["<C-Up>"] = {":vertical resize +5 <cr>"},
-    ["<C-Dn>"] = {":vertical resize -5 <cr>"},
+    ["<C-Up>"] = {":horizontal resize +5 <cr>"},
+    ["<C-Down>"] = {":horizontal resize -5 <cr>"},
+    ["<C-Right>"] = {":vertical resize -5 <cr>"},
+    ["<C-Left>"]  = {":vertical resize +5 <cr>"},
 
   },
 
