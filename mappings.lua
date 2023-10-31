@@ -29,6 +29,7 @@ M.disabled = {
     ["<leader>ch"] = null,
     ["<leader>cc"] = null,
     ["<leader>ca"] = null,
+    ["<leader>n"] = null,
     ["<leader>rn"] = null,
     ["<leader>rN"] = null,
 

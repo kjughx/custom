@@ -4,11 +4,23 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "onedark",
+  theme = "gruvbox",
   hl_override = highlights.override,
   hl_add = highlights.add,
 
-  transparency = false,
+  transparency = true,
+
+  statusline = {
+    theme = "vscode",
+  },
+
+  nvdash = {
+    enabled = false,
+  },
+
+  cheatsheet = {
+    enabled = false,
+  },
 }
 
 M.plugins = "custom.plugins"
