@@ -39,10 +39,6 @@ M.nvimtree = {
   },
 }
 
-M.blankline = {
-  show_current_context_start = false,
-}
-
 local cmp = require "cmp"
 M.cmp = {
   completion = {

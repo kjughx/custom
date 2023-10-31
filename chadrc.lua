@@ -11,7 +11,11 @@ M.ui = {
   transparency = true,
 
   statusline = {
-    theme = "vscode",
+    theme = "vscode_colored",
+    overriden_modules = function(modules)
+        table.remove(modules, 3)
+        table.remove(modules, 9)
+    end
   },
 
   nvdash = {
