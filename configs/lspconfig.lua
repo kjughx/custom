@@ -3,7 +3,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers = {"pylsp", "rust_analyzer"}
+local servers = {"pylsp", "rust_analyzer", "fortls", "lua_ls"}
 
 local clangd_capabilities = capabilities
 clangd_capabilities.offsetEncodings = { "utf-8" }

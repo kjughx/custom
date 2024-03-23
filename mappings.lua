@@ -34,6 +34,7 @@ M.disabled = {
     ["<leader>rN"] = null,
 
     ["<leader>f"] = null,
+    ["<leader>b"] = null,
   },
 
   i = {
@@ -155,6 +156,12 @@ M.telescope = {
   n = {
     ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
   },
+}
+
+M.neogit = {
+    n = {
+        ["<leader>gg"] = {"<cmd> Neogit<cr>", "Open Neogit"}
+    }
 }
 
 return M

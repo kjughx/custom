@@ -6,8 +6,15 @@ local M = {}
 
 ---@type HLTable
 M.override = {
+
   IndentBlanklineContextStart = {
     bg = "#282A36",
+  },
+  DiffAdd = {
+    fg = "#b8bb26",
+  },
+  DiffDelete = {
+    bg = "#fb4934",
   },
   Comment = {
     italic = true,

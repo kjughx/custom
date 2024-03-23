@@ -43,11 +43,25 @@ local plugins = {
 
   { "folke/which-key.nvim", enabled = true },
 
-  { "lukas-reineke/indent-blankline.nvim", opts = overrides.blankline },
+  { "lukas-reineke/indent-blankline.nvim", enabled = false },
 
   { "nvim-tree/nvim-tree.lua", enabled = false },
 
   { "hrsh7th/nvim-cmp", opts = overrides.cmp },
+
+  {
+    "NeogitOrg/neogit",
+      dependencies = {
+      "nvim-lua/plenary.nvim",         -- required
+--      "sindrets/diffview.nvim",        -- optional - Diff integration
+
+      -- Only one of these is needed, not both.
+      "nvim-telescope/telescope.nvim", -- optional
+      },
+      opts = overrides.neogit,
+      lazy = false,
+      enabled = true,
+  }
 }
 
 return plugins

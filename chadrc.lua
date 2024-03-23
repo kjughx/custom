@@ -8,7 +8,7 @@ M.ui = {
   hl_override = highlights.override,
   hl_add = highlights.add,
 
-  transparency = true,
+  transparency = false,
 
   statusline = {
     theme = "vscode_colored",

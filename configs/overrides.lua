@@ -50,4 +50,8 @@ M.cmp = {
   },
 }
 
+M.neogit = {
+    kind = "split",
+}
+
 return M
